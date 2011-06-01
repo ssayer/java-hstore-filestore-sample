@@ -1,0 +1,5 @@
+A more complete sample application than java-hstore-sample that uses the file system to store hData records.
+
+By default records are kept in /hdata/store, but this can be changed by editing the src/resources/conf/hstore.properties
+
+This does not include the required configuration to build/run as web application.
