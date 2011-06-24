@@ -45,7 +45,7 @@ public class ExtensionImpl implements Extension {
     @XmlAttribute(name = "extensionId", required = true)
     protected String extensionId;
     @XmlValue
-    protected String content;
+    protected String url;
 
     public ExtensionImpl() {}
 
@@ -68,86 +68,9 @@ public class ExtensionImpl implements Extension {
     return this.contentType;
   }
 
-  public String getContent() {
-    return this.content;
+  @Override
+  public String getUrl() {
+    return this.url;
   }
-
-//
-//    /**
-//     * Gets the value of the content property.
-//     *
-//     * @return
-//     *     possible object is
-//     *     {@link String }
-//     *
-//     */
-//    public String getContent() {
-//        return this.content;
-//    }
-//
-//    /**
-//     * Sets the value of the content property.
-//     *
-//     * @param value
-//     *     allowed object is
-//     *     {@link String }
-//     *
-//     */
-//    public void setContent(String value) {
-//        this.content = value;
-//    }
-//
-//    /**
-//     * Gets the value of the contentType property.
-//     *
-//     * @return
-//     *     possible object is
-//     *     {@link String }
-//     *
-//     */
-//    public String getContentType() {
-//        return contentType;
-//    }
-//
-//    /**
-//     * Sets the value of the contentType property.
-//     *
-//     * @param value
-//     *     allowed object is
-//     *     {@link String }
-//     *
-//     */
-//    public void setContentType(String value) {
-//        this.contentType = value;
-//    }
-//
-//    /**
-//     * Gets the value of the extensionId property.
-//     *
-//     * @return
-//     *     possible object is
-//     *     {@link String }
-//     *
-//     */
-//    public String getExtensionId() {
-//        return extensionId;
-//    }
-//
-//    /**
-//     * Sets the value of the extensionId property.
-//     *
-//     * @param value
-//     *     allowed object is
-//     *     {@link String }
-//     *
-//     */
-//    public void setExtensionId(String value) {
-//        this.extensionId = value;
-//    }
-//
-//  @Override
-//  public String getId() {
-//    return getExtensionId();
-//  }
 
 }

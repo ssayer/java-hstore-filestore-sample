@@ -31,36 +31,29 @@ public class HDRProviderImplTest {
 
     HDRProviderImpl prov;
     String id = "1235";
-    
+
     public HDRProviderImplTest() {
-      prov = new HDRProviderImpl();
-    
+        prov = new HDRProviderImpl();
+
     }
 
     @BeforeClass
     public static void setUpClass() {
-      HDRProviderImpl.path = new File("/hdata/tests");
+        HDRProviderImpl.path = new File("/hdata/tests");
     }
 
     @AfterClass
     public static void tearDownClass() {
-      recursiveDelete(HDRProviderImpl.path);
+        recursiveDelete(HDRProviderImpl.path);
     }
 
-   @Test
-  public void testGetMissingRecord() {
-//    HDR hdr = prov.getHDR(id);
-//    assertNull(hdr);
-  }
+    @Test
+    public void testGetMissingRecord() {
 
+        try {
+            HDR hdr = prov.getHDR(id);
+            fail();
+        } catch (Exception e) {}
 
-//  @Test
-//  public void testCreateRecord() {
-//    HDR hdr = prov.createHDR(id);
-//    assertNotNull(hdr);
-//    assertEquals(id, hdr.getId());
-//    assertNotNull(hdr.getRootDocument());
-//  }
-
-
+    }
 }

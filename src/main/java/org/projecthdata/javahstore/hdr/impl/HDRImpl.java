@@ -67,7 +67,7 @@ public class HDRImpl implements HDR {
 
   boolean create() {
    if (!hdrDir.mkdirs()) {
-    return false;
+    throw new RuntimeException("Unable to create directory: " + hdrDir.getPath());
    }
    return this.rootDocument.save();
   }

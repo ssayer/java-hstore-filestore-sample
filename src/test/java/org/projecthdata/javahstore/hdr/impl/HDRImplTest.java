@@ -40,14 +40,17 @@ public class HDRImplTest {
 
     @Before
     public void setUp() {
-      hdrFile = new File("/hstore/test/1234");
+      File testStore = new File ("teststore");
+      hdrFile = new File(testStore, "1234");
+      testStore.delete();
+      testStore.deleteOnExit();
       hdrFile.delete();
       hdrFile.deleteOnExit();
     }
 
     @After
     public void tearDown() {
-      assertTrue(recursiveDelete(hdrFile));
+      recursiveDelete(hdrFile);
     }
 
     @Test

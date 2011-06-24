@@ -36,7 +36,6 @@ public class HDRProviderImpl implements HDRProvider {
 
   static {
 
-    // TODO - add options to specifiy file store path @ssayer
     Properties props= new Properties();
     try {
       String fileName = File.separator + "hstore.properties";
